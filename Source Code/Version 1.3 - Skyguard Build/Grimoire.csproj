@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="packages\PostSharp.6.9.10\build\PostSharp.props" Condition="Exists('packages\PostSharp.6.9.10\build\PostSharp.props')" />
   <PropertyGroup>
@@ -8,6 +8,8 @@
     <OutputType>WinExe</OutputType>
     <LangVersion>8.0</LangVersion>
     <AssemblyName>Grimoire</AssemblyName>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <LargeAddressAware>true</LargeAddressAware>
     <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <WarningLevel>4</WarningLevel>
@@ -92,6 +94,27 @@
   <PropertyGroup>
     <StartupObject />
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <Optimize>true</Optimize>
+    <WarningLevel>2</WarningLevel>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="AxInterop.ShockwaveFlashObjects, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -103,9 +126,8 @@
     <Reference Include="BrotliSharpLib, Version=0.3.2.0, Culture=neutral, PublicKeyToken=3f4e2a1cd615fcb7, processorArchitecture=MSIL">
       <HintPath>packages\BrotliSharpLib.0.3.3\lib\net451\BrotliSharpLib.dll</HintPath>
     </Reference>
-    <Reference Include="DarkUI, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\DarkUI\DarkUI-13092021\bin\Release\net452\DarkUI.dll</HintPath>
+    <Reference Include="DarkUI">
+      <HintPath>C:\Version 1.3 - Skyguard Build\Dependency\DarkUI.dll</HintPath>
     </Reference>
     <Reference Include="EasyHook, Version=2.7.7097.0, Culture=neutral, PublicKeyToken=4b580fca19d0b0c5, processorArchitecture=MSIL">
       <HintPath>packages\EasyHook.2.7.7097\lib\net40\EasyHook.dll</HintPath>
@@ -177,9 +199,8 @@
     <Reference Include="Unity3.Eyedropper">
       <HintPath>Dependency\Unity3.Eyedropper.dll</HintPath>
     </Reference>
-    <Reference Include="VisualStudioTabControl, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\Users\raiha\Downloads\Compressed\VisualStudioTabControl\VisualStudioTabControl\bin\Release\VisualStudioTabControl.dll</HintPath>
+    <Reference Include="VisualStudioTabControl">
+      <HintPath>C:\Version 1.3 - Skyguard Build\Dependency\VisualStudioTabControl.dll</HintPath>
     </Reference>
     <Reference Include="WindowsBase" />
   </ItemGroup>
@@ -594,6 +615,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
+    <None Include="app.manifest" />
     <None Include="packages.config" />
     <None Include="Properties\App.config">
       <SubType>Designer</SubType>
@@ -669,10 +691,12 @@
   </PropertyGroup>
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
-      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+      <ErrorText>Bu proje bu bilgisayarda olmayan NuGet paketlerine başvuru yapıyor. Bunları indirmek için NuGet Paket Geri Yükleme'yi kullanın. Daha fazla bilgi için, bkz. http://go.microsoft.com/fwlink/?LinkID=322105. Eksik dosya: {0}.</ErrorText>
     </PropertyGroup>
     <Error Condition="!Exists('packages\PostSharp.6.9.10\build\PostSharp.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\PostSharp.6.9.10\build\PostSharp.props'))" />
     <Error Condition="!Exists('packages\PostSharp.6.9.10\build\PostSharp.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\PostSharp.6.9.10\build\PostSharp.targets'))" />
+    <Error Condition="!Exists('packages\LargeAddressAware.1.0.6\build\LargeAddressAware.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\LargeAddressAware.1.0.6\build\LargeAddressAware.targets'))" />
   </Target>
   <Import Project="packages\PostSharp.6.9.10\build\PostSharp.targets" Condition="Exists('packages\PostSharp.6.9.10\build\PostSharp.targets')" />
+  <Import Project="packages\LargeAddressAware.1.0.6\build\LargeAddressAware.targets" Condition="Exists('packages\LargeAddressAware.1.0.6\build\LargeAddressAware.targets')" />
 </Project>
