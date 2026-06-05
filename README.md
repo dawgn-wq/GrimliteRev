@@ -14,6 +14,8 @@ Do the steps below.
 (2) Extract the package (RAR file), <br />
 (3) Use the client through the .EXE file <br />
 (4) Enjoy. <br />
+# AI Assisted Code
+This repository utilized AI-assisted tools (Gemini) for code generation and optimization.
 # License:
 The main source code of this project is dedicated to the public domain under the CC0 1.0 Universal license. 
 
