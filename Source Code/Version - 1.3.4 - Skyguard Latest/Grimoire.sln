@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 18
+VisualStudioVersion = 18.6.11822.322 stable
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Grimoire", "Grimoire.csproj", "{A6469070-59A9-2D66-156E-DD3F772651DD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A6469070-59A9-2D66-156E-DD3F772651DD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A6469070-59A9-2D66-156E-DD3F772651DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A6469070-59A9-2D66-156E-DD3F772651DD}.Debug|x86.ActiveCfg = Debug|x86
+		{A6469070-59A9-2D66-156E-DD3F772651DD}.Debug|x86.Build.0 = Debug|x86
+		{A6469070-59A9-2D66-156E-DD3F772651DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A6469070-59A9-2D66-156E-DD3F772651DD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A6469070-59A9-2D66-156E-DD3F772651DD}.Release|x86.ActiveCfg = Release|x86
+		{A6469070-59A9-2D66-156E-DD3F772651DD}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {568AA259-9D97-449E-B3F2-A65D690A0EC7}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup />
+  <ItemGroup>
+    <Compile Update="Grimoire.UI\AboutForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Grimoire.UI\BankForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Grimoire.UI\BotManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Grimoire.UI\CommandColorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Grimoire.UI\CommandNode.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="Grimoire.UI\CosmeticForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Grimoire.UI\DPSForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Grimoire.UI\EyeDropper.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Grimoire.UI\Hotkeys.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Grimoire.UI\Loaders.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Grimoire.UI\LogForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Grimoire.UI\NodeEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Grimoire.UI\Notepad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Grimoire.UI\PacketLogger.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Grimoire.UI\PacketSpammer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Grimoire.UI\PacketTamperer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Grimoire.UI\PluginManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Grimoire.UI\RawCommandEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Grimoire.UI\ResizableUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="Grimoire.UI\Root.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Grimoire.UI\Set.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Grimoire.UI\Travel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Grimoire.UI\UserFriendlyCommandEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+</Project>

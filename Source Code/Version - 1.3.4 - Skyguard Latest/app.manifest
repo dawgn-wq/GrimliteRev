@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<assembly manifestVersion="1.0" xmlns="urn:schemas-microsoft-com:asm.v1">
+  <!-- processorArchitecture="x86" eklenerek uygulamanın 32-bit Flash ile uyumlu çalışması garanti altına alındı -->
+  <assemblyIdentity version="1.0.0.0" name="GrimLiteRev.App" processorArchitecture="x86" type="win32" />
+
+  <!-- UYGULAMA YETKİLERİ (Standart Windows gereksinimi) -->
+  <trustInfo xmlns="urn:schemas-microsoft-com:asm.v2">
+    <security>
+      <requestedPrivileges xmlns="urn:schemas-microsoft-com:asm.v3">
+        <requestedExecutionLevel level="asInvoker" uiAccess="false" />
+      </requestedPrivileges>
+    </security>
+  </trustInfo>
+
+  <!-- UYGULAMA AYARLARI (OS Uyumluluğu) -->
+  <compatibility xmlns="urn:schemas-microsoft-com:compatibility.v1">
+    <application>
+      <!-- Windows 7 -->
+      <supportedOS Id="{35138b9a-5d96-4fbd-8e2d-a2440225f93a}" />
+      <!-- Windows 8.1 -->
+      <supportedOS Id="{1f676c76-80e1-4239-95bb-83d0f6d0da78}" />
+      <!-- Windows 10 ve Windows 11 -->
+      <supportedOS Id="{8e0f7a12-bfb3-4fe8-b9a5-48fd50a15a9a}" />
+    </application>
+  </compatibility>
+
+  <!-- ACELENT'İN ÇÖZÜMÜNÜN C# ENTEGRASYONU -->
+  <file name="Flash.ocx">
+    <!-- Shockwave Flash Object Sınıfı -->
+    <comClass description="Shockwave Flash Object"
+              clsid="{D27CDB6E-AE6D-11cf-96B8-444553540000}"
+              threadingModel="Apartment"
+              tlbid="{D27CDB6B-AE6D-11cf-96B8-444553540000}"
+              progid="ShockwaveFlash.ShockwaveFlash"
+              miscStatus=""
+              miscStatusContent="recomposeonresize,cantlinkinside,insideout,activatewhenvisible,setclientsitefirst">
+      <progid>ShockwaveFlash.ShockwaveFlash.1</progid>
+      <progid>ShockwaveFlash.ShockwaveFlash.32</progid>
+    </comClass>
+
+    <!-- Flash Factory Sınıfı -->
+    <comClass description="Macromedia Flash Factory Object"
+              clsid="{D27CDB70-AE6D-11cf-96B8-444553540000}"
+              threadingModel="Apartment"
+              tlbid="{D27CDB6B-AE6D-11cf-96B8-444553540000}"
+              progid="FlashFactory.FlashFactory">
+      <progid>FlashFactory.FlashFactory.1</progid>
+    </comClass>
+
+    <!-- TypeLib Tanımı -->
+    <typelib tlbid="{D27CDB6B-AE6D-11cf-96B8-444553540000}"
+             version="1.0"
+             helpdir="."
+             resourceid="0"
+             flags=""/>
+  </file>
+
+  <!-- Harici Arayüz Proxy Tanımlamaları -->
+  <comInterfaceExternalProxyStub iid="{86230738-D762-4C50-A2DE-A753E5B1686F}"
+                                 name="IFlashObject"
+                                 tlbid="{D27CDB6B-AE6D-11CF-96B8-444553540000}"
+                                 proxyStubClsid32="{00020424-0000-0000-C000-000000000046}"/>
+
+  <comInterfaceExternalProxyStub iid="{D27CDB6C-AE6D-11CF-96B8-444553540000}"
+                                 name="IShockwaveFlash"
+                                 tlbid="{D27CDB6B-AE6D-11CF-96B8-444553540000}"
+                                 proxyStubClsid32="{00020424-0000-0000-C000-000000000046}"/>
+
+  <comInterfaceExternalProxyStub iid="{D27CDB6D-AE6D-11CF-96B8-444553540000}"
+                                 name="_IShockwaveFlashEvents"
+                                 tlbid="{D27CDB6B-AE6D-11CF-96B8-444553540000}"
+                                 proxyStubClsid32="{00020420-0000-0000-C000-000000000046}"/>
+</assembly>
